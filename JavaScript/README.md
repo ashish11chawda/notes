@@ -18,10 +18,12 @@
 **Object 1**
 | F() | Data |
 | ----------- | ----------- |
+|  |  |
 
 **Object 2**
 | F() | Data |
 | ----------- | ----------- |
+|  |  |
 
 **Program is divided into different Objects**
 
