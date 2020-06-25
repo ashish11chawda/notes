@@ -15,15 +15,13 @@
 
 <h2 id="oop">Object Oriented Programming</h2>
 
-**Object 1**
+|**Object 1** | |
+|---- | ----- |
 | F() | Data |
-| ----------- | ----------- |
-|  |  |
 
-**Object 2**
+|**Object 2**| |
+| ----| ---- |
 | F() | Data |
-| ----------- | ----------- |
-|  |  |
 
 **Program is divided into different Objects**
 
