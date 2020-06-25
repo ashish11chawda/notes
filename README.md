@@ -148,7 +148,7 @@ function Circle(radius) {
 
 > Constructor Function returns `this` pointer implicitly so there's no return statement needed in this function.
 
-_Using Constructor Function_
+_Using Constructor Function to instantiate the Object_
 
 ```javascript
 const another = new Circle(1);
@@ -171,6 +171,18 @@ const another = Circle(1);
 _then `this` pointer is not made to point the created Object, because by-default it is pointing `window` object_
 
 > Every Object in JavaScript has a property called `constructor`.
+
+**Prototypes**
+
+_Adding a prototype_
+
+```javascript
+Circle.prototype.changeRadius = function (newRadius) {
+  this.radius = newRadius;
+};
+```
+
+> This prototype is not part of Object `Circle` itself but it is inheriting it as a prototype.
 
 #### Function as a Object
 
@@ -315,21 +327,22 @@ if ("radius" in circle) {
 
 #### Getter and Setter
 
-*Consider following Object*
+_Consider following Object_
+
 ```javascript
 function Circle(radius) {
-    
+
     this.radius = radius;
-    
+    //defaultLocation can't be used with dot notation because its scope is only this function
     let defaultLocation = {
       x: 0,
       y: 0
     }
-    
+
     this.getDefaultLocation = function(){
       return defaultLocation;
     };
-  
+
     this.draw = function () {
         console.log("this will draw something");
     };
@@ -352,3 +365,118 @@ circle.draw();
 circle.defaultLocation();
 circle.defaultLocation({1,2});
 ```
+
+### Inheritance
+
+_Shape class inherit circle class although it should be opposite but just consider code snippet for example only_
+
+```javascript
+function Shape(type, radius) {
+  if (type === "circle") {
+    Circle.call(radius);
+  }
+  this.type = type;
+}
+```
+
+_Inherit Prototype_
+
+```javascript
+Shape.prototype = Object.create(Circle.prototype);
+```
+_Now any of the Prototype of Circle Object can be used by Shape Object_
+
+
+_Instantiate Shape Object_
+
+```javascript
+const shape1 = new Shape("circle", 1);
+//this creates an object of shape circle of radius 1
+```
+
+_Now if you check `shape1.prototype.constructor` you'll find out it is still using `Circle()` constructor_
+
+_Use Shape constructor_
+
+```javascript
+Shape.prototype.constructor = Shape;
+```
+
+### Classes
+
+> It is just Syntactic Sugar, because it uses old ES5 constructor functions underneath.
+
+```javascript
+class Book {
+  constructor(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+  }
+
+  getSummary() {
+    return `${this.title} was written by ${this.author} in ${this.year}`;
+  }
+  revise(newYear) {
+    this.year = newYear;
+    this.revised = true;
+  }
+  static topBookStore() {
+    return `My Book Store`;
+  }
+}
+
+//Instantiate Object
+const book1 = new Book("Book 1", "Ashish Chawda", "2020");
+
+//Using static method
+book1.topBookStore();
+//this line of code will give error as "Not a function"
+
+
+//So we need class name to use this method as static methods don't need object to be instantiated first
+Book.topBookStore();
+```
+
+#### Sub classes
+
+```javascript
+class Magzine extends Book {
+  //extends keyword does the same thing as inheriting the Book class but the easy way
+  constructor(title, author, year, month) {
+    super(title, author, year); //super() calls parent class' constructor
+    this.month = month;
+  }
+}
+
+//Instantiate Magzine
+const mag1 = new Magzine("Mag 1", "John Doe", "2020", "June");
+```
+
+## AJAX
+
+### Introduction
+
+- Asynchronous JavaScript and XML
+- Set of web technologies
+- Send and receive data asynchronously
+- Does not interfere with current web page
+- JSON has replaced XML for the most part
+
+#### XmlHttpRequest (XHR) Object
+
+- API in the form of Object
+- Provided by the Browser's JS environment
+- Methods transfer data between client/server
+- Can be used with other protocols than HTTP
+- Can work with data other than XML (JSON, Plain Text)
+
+> **Libraries to make AJAX calls**
+>
+> - jQuery
+> - Axios
+> - Superagent
+> - Fetch API
+> - Prototype
+> - Node HTTP
+
