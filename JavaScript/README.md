@@ -18,9 +18,11 @@
 **Object 1**
 | F() | Data |
 | ----------- | ----------- |
+
 **Object 2**
 | F() | Data |
 | ----------- | ----------- |
+
 **Program is divided into different Objects**
 
 - Each Object has inter-related Data and methods(functions)
