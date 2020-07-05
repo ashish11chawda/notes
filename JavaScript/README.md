@@ -1,9 +1,26 @@
 # Introduction to Object Oriented Programming JavaScript
 
-- [Procedural Programming](#pp)
-- [Object Oriented Programming](#oop)
+- [Introduction to Object Oriented Programming JavaScript](#introduction-to-object-oriented-programming-javascript)
+  - [Procedural Programming](#procedural-programming)
+  - [Object Oriented Programming](#object-oriented-programming)
+    - [Benefits of OOP](#benefits-of-oop)
+    - [Object](#object)
+      - [Object Literal Syntax](#object-literal-syntax)
+      - [Factory Function](#factory-function)
+      - [Constructor Function](#constructor-function)
+      - [Function as a Object](#function-as-a-object)
+      - [Object properties](#object-properties)
+      - [Enumerating Object](#enumerating-object)
+      - [Getter and Setter](#getter-and-setter)
+    - [Data Types](#data-types)
+    - [Inheritance](#inheritance)
+    - [Classes](#classes)
+      - [Sub classes](#sub-classes)
+  - [AJAX](#ajax)
+    - [Introduction](#introduction)
+    - [XmlHttpRequest (XHR) Object](#xmlhttprequest-xhr-object)
 
-<h2 id="pp">Procedural Programming</h2>
+## Procedural Programming
 
 | F() | Data |
 | --- | ---- |
@@ -13,7 +30,7 @@
 
 > leads to spaghetti code
 
-<h2 id="oop">Object Oriented Programming</h2>
+## Object Oriented Programming
 
 **Object 1**
 | F() | Data |
@@ -222,38 +239,6 @@ const Circle = new Function(
 
 _You can use it as same as we use constructor function to create objects using `new` operator_
 
-### Data Types
-
-| Primitive or Value Types | Reference Types or Objects |
-| ------------------------ | -------------------------- |
-| Number                   | Object                     |
-| String                   | Function                   |
-| Boolean                  | Array                      |
-| Symbol                   |
-| Undefined                |
-| Null                     |
-
-> When a object is created and stored in a variable, actually that object is not stored in that variable, instead that object is stored somewhere in memory and its address is stored in variable.
-
-```javascript
-let x = { value: 10 };
-let y = x;
-```
-
-_Here `x` is not storing the object itself but it is storing the address to that Object in memory, I guess that's why Objects are called Reference Types and when we try to copy that object to other entity, it is the reference that is copied not the object itself, so, now both `x` and `y` point to same memory location._
-
-_When we change any of `x` and `y` that change can be immediately reflected at the memory location Object is Present._
-
-```javascript
-let x = 10;
-```
-
-_Here `x` stores the Number value `10` itself._
-
-> `Primitive Data Types` are copied by their `value`.
-
-> `Objects` are copied by their `Reference`.
-
 #### Object properties
 
 **Adding a Property**
@@ -366,6 +351,38 @@ circle.defaultLocation();
 circle.defaultLocation({1,2});
 ```
 
+### Data Types
+
+| Primitive or Value Types | Reference Types or Objects |
+| ------------------------ | -------------------------- |
+| Number                   | Object                     |
+| String                   | Function                   |
+| Boolean                  | Array                      |
+| Symbol                   |
+| Undefined                |
+| Null                     |
+
+> When a object is created and stored in a variable, actually that object is not stored in that variable, instead that object is stored somewhere in memory and its address is stored in variable.
+
+```javascript
+let x = { value: 10 };
+let y = x;
+```
+
+_Here `x` is not storing the object itself but it is storing the address to that Object in memory, I guess that's why Objects are called Reference Types and when we try to copy that object to other entity, it is the reference that is copied not the object itself, so, now both `x` and `y` point to same memory location._
+
+_When we change any of `x` and `y` that change can be immediately reflected at the memory location Object is Present._
+
+```javascript
+let x = 10;
+```
+
+_Here `x` stores the Number value `10` itself._
+
+> `Primitive Data Types` are copied by their `value`.
+
+> `Objects` are copied by their `Reference`.
+
 ### Inheritance
 
 _Shape class inherit circle class although it should be opposite but just consider code snippet for example only_
@@ -384,8 +401,8 @@ _Inherit Prototype_
 ```javascript
 Shape.prototype = Object.create(Circle.prototype);
 ```
-_Now any of the Prototype of Circle Object can be used by Shape Object_
 
+_Now any of the Prototype of Circle Object can be used by Shape Object_
 
 _Instantiate Shape Object_
 
@@ -433,7 +450,6 @@ const book1 = new Book("Book 1", "Ashish Chawda", "2020");
 book1.topBookStore();
 //this line of code will give error as "Not a function"
 
-
 //So we need class name to use this method as static methods don't need object to be instantiated first
 Book.topBookStore();
 ```
@@ -463,7 +479,7 @@ const mag1 = new Magzine("Mag 1", "John Doe", "2020", "June");
 - Does not interfere with current web page
 - JSON has replaced XML for the most part
 
-#### XmlHttpRequest (XHR) Object
+### XmlHttpRequest (XHR) Object
 
 - API in the form of Object
 - Provided by the Browser's JS environment
@@ -479,4 +495,3 @@ const mag1 = new Magzine("Mag 1", "John Doe", "2020", "June");
 > - Fetch API
 > - Prototype
 > - Node HTTP
-
