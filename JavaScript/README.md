@@ -19,6 +19,7 @@
   - [AJAX](#ajax)
     - [Introduction](#introduction)
     - [XmlHttpRequest (XHR) Object](#xmlhttprequest-xhr-object)
+      - [Create XHR Object](#create-xhr-object)
 
 ## Procedural Programming
 
@@ -497,3 +498,10 @@ const mag1 = new Magzine("Mag 1", "John Doe", "2020", "June");
 > - Fetch API
 > - Prototype
 > - Node HTTP
+
+#### Create XHR Object
+```javascript
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET','file.txt',true);
+  //open type, url/file, async
+```
