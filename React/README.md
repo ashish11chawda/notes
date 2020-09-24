@@ -35,3 +35,6 @@
 ```bash
 npm i -g create-react-app
 ```
+| npm | i | -g | create-react-app |
+| :--:  | :-: | :-: | :--------------: |
+| command | install | Global | option |
