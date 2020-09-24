@@ -118,5 +118,10 @@ int * ptr; // pointer or address variable
 ptr = &a; // initializing pointer
 int b = *ptr; // dereferencing a pointer for the data its pointing
 ```
-
 </details>
+
+## Intoduction
+
+The arrangement or organising of data inside main memory for efficient utilization by the application is called Data Structure.
+
+![Data Structure Intro](images/Data%20Structure%20Intro.png)
