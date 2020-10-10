@@ -118,10 +118,30 @@ int * ptr; // pointer or address variable
 ptr = &a; // initializing pointer
 int b = *ptr; // dereferencing a pointer for the data its pointing
 ```
+
 </details>
 
 ## Intoduction
 
-The arrangement or organising of data inside main memory for efficient utilization by the application is called Data Structure.
-
 ![Data Structure Intro](images/Data%20Structure%20Intro.png)
+
+> Every Program deals with some data, that data needs to be brought inside main memory with program for execution of the program. The arrangement or organising of data inside main memory for efficient utilization by the application is called **Data Structure**.
+
+In case of large scale data or commercial data(operational and legacy data), the arrangement of data in HDD or permanent storage is called Database.
+
+> Operational Data is used on daily basis.
+
+> legacy data is historical data which is kept on an array of disc which is **Data Warehouse**.
+> Algorithms operating on legacy data are Data Mining Algorithms.
+
+![Data Structure Intro](images/DSA%20Intro%202.png)
+
+### Static and Dynamic Memory Allocation
+
+#### Memory
+
+Memory of larger sizes is divided into managable units called as segment.
+Memory Segment is basically of 64KB *(spanning from 0 to 65535 bytes)* for memory of larger size.
+
+> ![Data Structure Intro](images/Memory%20Segment.png)
+
