@@ -40,3 +40,29 @@
 - Free Software Licensing
 - Better Malware Protection
 - Access to Source Code
+
+## Basic Commands
+
+### pwd
+
+- Present Working Directory
+
+> **~** is for home directory.
+
+> **/** is for home directory.
+
+```bash
+$ pwd
+/home/tutorial
+```
+### cd
+
+- Change Directory
+
+> To autocomplete the file/folder name you want to access, type initial characters and the press TAB to autocomplete the file/folder name
+
+```bash
+$ cd Linux
+$ pwd
+/home/tutorial/Linux
+```
