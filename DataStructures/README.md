@@ -8,10 +8,10 @@ Data structures is how that data is organised in memory.
 
 ## Essential Concepts of C and C++
 
-<details>
-<summary> <h3 style="display:inline;">Array</h3> </summary>
+### Array
 
 > Array is a collection of similar type of data items in a continuous manner.
+
 > Indexing starts from `0` to `size - 1`.
 
 It is created on Stack inside the memory.
@@ -33,10 +33,7 @@ for(int i = 0; i < size-1; i++){
 }
 ```
 
-</details>
-
-<details>
-<summary> <h3 style="display:inline;">Structures</h3> </summary>
+### Structures
 
 > Collection of related data items of dissimilar type under one name.
 
@@ -104,9 +101,7 @@ struct card{
 struct card deck[52];
 ```
 
-</details>
-<details>
-<summary> <h3 style="display:inline;">Pointers</h3> </summary>
+### Pointers
 
 > Pointers are variables which store addresses of data variables.
 
@@ -119,7 +114,6 @@ ptr = &a; // initializing pointer
 int b = *ptr; // dereferencing a pointer for the data its pointing
 ```
 
-</details>
 
 ## Intoduction
 
