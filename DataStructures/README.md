@@ -141,7 +141,35 @@ In case of large scale data or commercial data(operational and legacy data), the
 #### Memory
 
 Memory of larger sizes is divided into managable units called as segment.
-Memory Segment is basically of 64KB *(spanning from 0 to 65535 bytes)* for memory of larger size.
+Memory Segment is basically of 64KB *(spanning from 0 to 65535 bytes) a total of 65536 bytes* for memory of larger size.
 
 > ![Data Structure Intro](images/Memory%20Segment.png)
 
+> ![Data Structure Intro](images/Stack.png)
+
+
+Static Memory Allocation is done on Stack.
+
+Dynamic Memory Allocation is done on Heap.
+
+### Types of Data Structures
+
+1. Physical Data Structres
+![Array and Linked List](images/arrayAndLinkedList.png) 
+   1. Array
+       -  Size of Array is static
+       -  can be created in stack and in heap by dynamic memory allocation
+       -  when we know the length of list or number of elements to be stored
+   2. Linked List
+       - Always created in Heap
+       - Variable Length
+1. Logical Data Structures
+    - All Logical DS are implemented using Physical DS i.e., Array and Linked List
+   1. Linear Data Structure
+      1. Stack
+      2. Queue
+   2. Non-Linear Data Structure
+      1. Trees
+      2. Graph
+   3. Tabular Data Structure
+      1. Hash Table
