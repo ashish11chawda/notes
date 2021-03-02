@@ -195,4 +195,57 @@ Dynamic Memory Allocation is done on Heap.
 > - When we create a class in any programming language with some data and methods to operate on that data
 > - It becomes Abstract Data Type as the user of this User defined Class need not to know the implementation of data and its methods
 
+## Recursion
 
+- If a function calls itself it is called recursive function
+- Base condition is the condition on basis of which recursion stops
+
+Let's consider an example where there are 3 rooms one inside another
+
+![Analogy](images/recursionAnalogy.png)
+```cpp
+void fun1(int n){
+    cout << n;
+    fun1(n-1);
+}
+void main(){
+    int x = 3;
+    fun1(x);
+}
+// Output: 3 2 1
+
+// Analogy: Task to do(in order):
+// 1. Go to Next Room
+// 2. Switch on the bulb 
+```
+
+```cpp
+void fun1(int n){
+    fun1(n-1);
+    cout << n;
+}
+void main(){
+    int x = 3;
+    fun2(x);
+}
+// Output: 1 2 3
+
+// Analogy: Task to do(in order):
+// 1. Switch on the bulb
+// 2. Go to Next Room
+```
+**Recursion Tree**
+
+![Example](images/recursionEx1.png)
+
+**Generalising Recursion**
+
+```cpp
+void fun(int n){
+    if (n > 0){
+      // 1.   Statement executed at calling time (Ascending)
+      /* 2.*/ fun(n-1); /* Any computation with returned will be done at returning time*/
+      // 3.   Statement executed at returning time (Descending)
+    }
+}
+```
