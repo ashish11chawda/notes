@@ -128,7 +128,7 @@ In case of large scale data or commercial data(operational and legacy data), the
 > legacy data is historical data which is kept on an array of disc which is **Data Warehouse**.
 > Algorithms operating on legacy data are Data Mining Algorithms.
 
-![Data Structure Intro](images/DSA%20Intro%202.png)
+![Data Structure Intro](images/DSAIntro2.png)
 
 ### Static and Dynamic Memory Allocation
 
@@ -137,7 +137,7 @@ In case of large scale data or commercial data(operational and legacy data), the
 Memory of larger sizes is divided into managable units called as segment.
 Memory Segment is basically of 64KB *(spanning from 0 to 65535 bytes) a total of 65536 bytes* for memory of larger size.
 
-> ![Data Structure Intro](images/Memory%20Segment.png)
+> ![Data Structure Intro](images/MemorySegment.png)
 
 > ![Data Structure Intro](images/Stack.png)
 
