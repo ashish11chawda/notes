@@ -276,6 +276,7 @@ void main(){
 ![Recursion on Stack](images/RecursionWithStack.png)
 
 - Time Complexity of above code is `O(n)`
+
 ```cpp
 T(n) = 1            n=0
        T(n-1)+2     n>0
