@@ -173,3 +173,26 @@ Dynamic Memory Allocation is done on Heap.
       2. Graph
    3. Tabular Data Structure
       1. Hash Table
+
+### Data Type
+
+- Representation of Data
+- Operation on Data
+
+> Example: Primitive Data Type: Integer
+> - Let's assume it takes 2 bytes
+> - 1 bit is stored for sign
+> - rest 15 bits are used to store integer
+
+#### Abstract Data Types
+
+- Abstract means hiding internal details
+- Related to OOP concepts
+- Abstract Data Types are data types whose implementation is not known to user and it is not needed to use that data type
+- Example: STL Stack, Queue, Graph, etc
+
+> Example: 
+> - When we create a class in any programming language with some data and methods to operate on that data
+> - It becomes Abstract Data Type as the user of this User defined Class need not to know the implementation of data and its methods
+
+
