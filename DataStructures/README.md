@@ -205,8 +205,10 @@ Let's consider an example where there are 3 rooms one inside another
 ![Analogy](images/recursionAnalogy.png)
 ```cpp
 void fun1(int n){
-    cout << n;
-    fun1(n-1);
+    if ( n > 0 ){
+        cout << n;
+        fun1(n-1);
+    }
 }
 void main(){
     int x = 3;
@@ -221,8 +223,10 @@ void main(){
 
 ```cpp
 void fun1(int n){
-    fun1(n-1);
-    cout << n;
+    if ( n > 0 ){
+        fun1(n-1);
+        cout << n;
+    }
 }
 void main(){
     int x = 3;
@@ -248,4 +252,58 @@ void fun(int n){
       // 3.   Statement executed at returning time (Descending)
     }
 }
+```
+
+### Recursion Uses Stack
+
+```cpp
+void fun1(int n){ // T(n) unit of time
+    if ( n > 0 ){ // 1 unit of time
+        cout << n; // 1 unit of time
+        fun1(n-1); // T(n-1) unit of time
+    }
+}
+
+// Total time : 
+// T(n) = T( n - 1 ) + 2
+void main(){
+    int x = 3;
+    fun1(x);
+}
+// Output: 3 2 1
+```
+
+![Recursion on Stack](images/RecursionWithStack.png)
+
+- Time Complexity of above code is `O(n)`
+```cpp
+T(n) = 1            n=0
+       T(n-1)+2     n>0
+// replacing constant with 1 
+T(n) = T(n-1) + 1 -> eq [1]
+T(n-1) = T(n-2) + 1
+
+// replacing value of T(n-1) in eq [1]
+T(n) = T(n-2) + 2 -> eq [2]
+
+//Similarily
+T(n) = T(n-3) + 3 -> eq [3]
+T(n) = T(n-4) + 4 -> eq [4]
+.
+.
+.
+T(n) = T(n-k) + k -> eq [5]
+//Let's assume
+n - k = 0
+// so
+n = k
+
+//from eq [5]
+T(n) = T(n-n) + n
+T(n) = T(0) + n
+T(n) = 1 + n
+T(n) = n + 1
+
+//Or we can say
+O(n)
 ```
