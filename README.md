@@ -10,6 +10,6 @@
 
 - [React.js](https://ashish11chawda.github.io/notes/React/)
 
-- [Linux](https://ashish11chawda.github.io/notes/Linux/)
+- [Linux](https://ashish11chawda.github.io/notes/linux/)
 
 - [NodeJS](https://ashish11chawda.github.io/notes/nodejs/)
